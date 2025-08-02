@@ -1,0 +1,36 @@
+import subprocess
+import datetime
+import os
+
+def outfile(command, out_type="txt", filename=None):
+    """Runs a command and writes output to the desired file type."""
+    result = subprocess.run(command, capture_output=True, text=True, shell=True)
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    ext = out_type.lower()
+
+    # Default filename if none provided
+    if not filename:
+        filename = f"skib_output_{timestamp}.{ext}"
+
+    output_dir = "output_logs"
+    os.makedirs(output_dir, exist_ok=True)
+    filepath = os.path.join(output_dir, filename)
+
+    # Handle different output formats
+    if ext in ["txt", "log"]:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(result.stdout + "\n" + result.stderr)
+    elif ext == "json":
+        import json
+        json.dump({"stdout": result.stdout, "stderr": result.stderr}, open(filepath, "w", encoding="utf-8"), indent=2)
+    elif ext == "csv":
+        import csv
+        with open(filepath, "w", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["stream", "output"])
+            writer.writerow(["stdout", result.stdout])
+            writer.writerow(["stderr", result.stderr])
+    else:
+        raise ValueError(f"Unsupported output type: {ext}")
+
+    return filepath
