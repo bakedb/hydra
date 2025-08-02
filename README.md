@@ -3,16 +3,18 @@ The most powerful language available to the human species. I think.
 
 ## What this... 'thing' is
 The Hydra project is a Python-based programming language with many QOL (and just plain dumb) modifications.
-Hydra is also backwards compatible with *all* Python 3 code (and possibly packages with some creative workarounds).
+Hydra is also backwards compatible with *all* Python 3 code.
 Great. Now that I have that out of the way, I can tell you what you shouldn't know how to do: how to download and use this.
 
 ## How to Use
 1. Download `hydra-installer.exe` or the equivalent for your platform.
-2. To run your file (with a `.hy` extension), use the command:
+2. During installation, make sure to check "add Hydra to PATH" on Windows.
+3. To run your file (with a `.hy` extension), use the command:
 
 ```bash
 hydra [path to Hydra script file]
 ```
+It's as simple as that.
 For example, if hello-world.hy was in your cwd:
 ```bash
 hydra hello-world.hy
