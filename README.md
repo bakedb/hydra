@@ -19,6 +19,7 @@ For example, if hello-world.hy was in your cwd:
 ```bash
 hydra hello-world.hy
 ```
+> You can add Hydra language support to VSCode by downloading the .vsix file in main. Then, drop it in a folder in VSCode's explorer, right click, then at the bottom of the menu, select "Install Extenstion VSIX".
 # Installing Modules
 To install a module, use the following command:
 ```bash
