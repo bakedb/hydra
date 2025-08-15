@@ -1,0 +1,19 @@
+import os
+
+def normalize(path):
+    return os.path.normpath(path)
+
+def to_absolute(path):
+    return os.path.abspath(path)
+
+def join(*segments):
+    return os.path.join(*segments)
+
+def to_posix(path):
+    return normalize(path).replace("\\", "/")
+
+def ensure_dir(path):
+    path = to_absolute(path)
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return path
