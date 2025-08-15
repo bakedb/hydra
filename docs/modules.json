@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Delay Print",
+    "keyword": "delayprint",
+    "version": "1.0.0",
+    "description": "Prints to the terminal with each character delayed at a customizable rate."
+  },
+  {
+    "name": "Color Output",
+    "keyword": "colorout",
+    "version": "2.0.0",
+    "description": "Lets you output colored text to the terminal."
+  },
+  {
+    "name": "Path Converter",
+    "keyword": "pathconvert",
+    "version": "1.0.0",
+    "description": "Converts file paths to and from NT and Unix formats."
+  },
+  {
+  "name": "Terminal Output",
+  "keyword": "termout",
+  "version": "1.0.0",
+  "description": "Logs the terminal session to a log file."
+  }
+
+]
