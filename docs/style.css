@@ -1,0 +1,66 @@
+:root {
+  --gradient-x: 50%;
+  --gradient-y: 50%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #333;
+  background: radial-gradient(
+    circle at var(--gradient-x) var(--gradient-y),
+    #e0f0ff,
+    #ffffff 70%
+  );
+  transition: background 0.2s ease-out;
+}
+
+header {
+  background: #4a90e2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+#search {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 4px;
+}
+
+main {
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
