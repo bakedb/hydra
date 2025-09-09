@@ -30,7 +30,7 @@ For example, to install the delayprint module:
 ```bash
 hydra -S delayprint
 ```
-This will install the delayprint module to the same directory as sk.py.
+This will install the delayprint module to the same directory as hy.py.
 You can then use it in your code:
 ```python
 import delayprint as dp
